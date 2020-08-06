@@ -7,7 +7,22 @@ This repo< add cool story here > =)
 
 <br>git init ...
 
+<br>⇒  django-admin startproject django2 .
+<br> ⇒  django-admin startapp core         
+
+
+####Settings file
+altered configs - see the file itself. the order matters inside brackets
+
+
+
+
+
 <br>
+<br>
+<br>
+
+
 
 
 

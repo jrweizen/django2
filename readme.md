@@ -1,5 +1,13 @@
+###DEF.: Repo to learn django with Mysql
+This repo< add cool story here > =) 
+
 ###Install Pre-requisites
-⇒  pip install django whitenoise gunicorn django-bootstrap4 PyMySQL django-stdimage
-⇒  pip freeze > requirements.txt
+<br>⇒  pip install django whitenoise gunicorn django-bootstrap4 PyMySQL django-stdimage
+<br>⇒  pip freeze > requirements.txt
+
+<br>git init ...
+
+<br>
+
 
 

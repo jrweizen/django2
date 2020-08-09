@@ -7,8 +7,9 @@ This repo< add cool story here > =)
 
 <br>git init ...
 
-<br>⇒  django-admin startproject django2 .
-<br> ⇒  django-admin startapp core         
+<br> ⇒  django-admin startproject django2 .
+<br> ⇒  django-admin startapp core
+<br> ⇒  brew install mysql-connector-c          
 
 
 ####Settings file

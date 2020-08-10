@@ -10,7 +10,7 @@ def contato(request):
     form = ContatoForm(request.POST or None)
 
     if str(request.method) == 'POST':
-        print(f'Post: {request.POST}')
+        # print(f'Post: {request.POST}')
         if form.is_valid():
             nome = form.cleaned_data['nome']
             email = form.cleaned_data['email']

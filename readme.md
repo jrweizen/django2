@@ -9,8 +9,13 @@ This repo< add cool story here > =)
 
 <br> ⇒  django-admin startproject django2 .
 <br> ⇒  django-admin startapp core
-<br> ⇒  brew install mysql-connector-c          
 
+#### Install Mysql:
+⇒  brew install mysql-connector-c          
+⇒  pip install MySQL          
+
+⇒  python manage.py migrate
+⇒  python manage.py createsuperuser
 
 ####Settings file
 altered configs - see the file itself. the order matters inside brackets

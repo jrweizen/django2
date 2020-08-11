@@ -2,6 +2,7 @@ from django.shortcuts import render
 from .forms import ContatoForm
 from django.contrib import messages
 
+
 def index(request):
     return render(request, 'index.html')
 
@@ -12,16 +13,19 @@ def contato(request):
     if str(request.method) == 'POST':
         # print(f'Post: {request.POST}')
         if form.is_valid():
+            form.send_mail()
+
             nome = form.cleaned_data['nome']
             email = form.cleaned_data['email']
             assunto = form.cleaned_data['assunto']
             mensagem = form.cleaned_data['mensagem']
 
-            print('Mensagem Enviada:')
-            print(f'Nome: {nome}')
-            print(f'email: {email}')
-            print(f'assunto: {assunto}')
-            print(f'mensagem: {mensagem}')
+            # Check data - remove from the code
+            # print('Mensagem Enviada:')
+            # print(f'Nome: {nome}')
+            # print(f'email: {email}')
+            # print(f'assunto: {assunto}')
+            # print(f'mensagem: {mensagem}')
 
             messages.success(request, 'Email Enviado com Sucesso!')
             form = ContatoForm()

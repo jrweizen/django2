@@ -20,3 +20,11 @@ class Produto(Base):
     estoque = models.IntegerField('Estoque')
     imagem = StdImageField('Imagem', upload_to='produtos', variations={'thumb': (124, 124)})
     slug = models.SlugField('Slug', max_length=100, blank=True, editable=False)
+
+    def __str__(self):
+        return self.nome
+
+def produto_pre_save(signal, instance, sender, **kwargs):
+    instance.slug = slugify(instance.nome)
+
+signals.pre_save.connect(produto_pre_save, sender=Produto)

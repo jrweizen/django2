@@ -42,6 +42,8 @@ def contato(request):
     return render(request, 'contato.html', context)
 
 def produto(request):
+    print(f'Usuário: {request.user}')
+
     # POST has upload function
     if str(request.method) == 'POST':
         form = ProdutoModelForm(request.POST, request.FILES)

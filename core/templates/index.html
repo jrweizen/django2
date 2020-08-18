@@ -1,6 +1,7 @@
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -8,6 +9,7 @@
     {% bootstrap_css %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <!-- Presenting products into table, bootstrap dark_table. In products show modal as image -->
@@ -15,10 +17,12 @@
 
         <table class="table table-dark">
             <thead>
-                <th scope="col">#</th>
-                <th scope="col">Produto</th>
-                <th scope="col">Preco</th>
-                <th scope="col">Estoque</th>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Preco</th>
+                    <th scope="col">Estoque</th>
+                </tr>
             </thead>
             <tbody>
                 {% for produto in produtos %}
@@ -29,7 +33,7 @@
                         <td scope="row">{{ produto.estoque }}</td>
                     </tr>
 
-                <!-- Modal for open image of the product -->
+                    <!-- Modal for open image of the product -->
                     <div class="modal fade bd-example-modal-lg show" id="modal{{produto.id}}" role="dialog">
                         <div class="modal-dialog">
                             <div class="modal-content">

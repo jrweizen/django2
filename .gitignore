@@ -1,0 +1,8 @@
+# .gitignore
+# https://www.toptal.com/developers/gitignore/api/django
+#
+#
+__pycache__
+*.*~
+*.pyc
+.idea

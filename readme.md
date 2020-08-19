@@ -21,6 +21,12 @@ This repo< add cool story here > =)
 altered configs - see the file itself. the order matters inside brackets
 
 
+#### HEROKU
+⇒  heroku login
+⇒  git add .
+⇒  git commit -m 'message'
+⇒  git push heroku master
+⇒  heroku run python manage.py migrate
 
 
 

@@ -13,6 +13,11 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 import dj_database_url
 
+# Using PostgreSQL with Heroku - basic default heroku configs
+DATABASES = {
+    'default': dj_database_url.config()
+}
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -74,7 +79,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django2.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
@@ -140,11 +144,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # E-mail Configurations
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-"""
-# Production:
-EMAIL_HOST = 'localhost'
-EMAIL_HOST_USER = 'no-reply@seudominio.com.br'
-EMAIL_PORT = 587
-EMAIL_USER_TLS = True
-EMAIL_HOST_PASSWORD = 'your_password'
-"""
+# # Production:
+# EMAIL_HOST = 'localhost'
+# EMAIL_HOST_USER = 'no-reply@seudominio.com.br'
+# EMAIL_PORT = 587
+# EMAIL_USER_TLS = True
+# EMAIL_HOST_PASSWORD = 'your_password'
